@@ -1,0 +1,405 @@
+<!DOCTYPE HTML>
+<!--
+	Astral by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Astral by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	
+		<style>
+			/* Modal Styles */
+			.modal {
+				display: none;
+				position: fixed;
+				z-index: 1;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				overflow: auto;
+				background-color: rgb(0, 0, 0);
+				background-color: rgba(0, 0, 0, 0.4);
+			}
+
+			.modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+		.close {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            float: right;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+		</style>
+
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper-->
+			<div id="wrapper">
+
+				<!-- Nav -->
+					<nav id="nav">
+						<a href="#" class="icon solid fa-home"><span>Home</span></a>
+						<a href="#work" class="icon solid fa-utensils"><span>Menu</span></a>
+						<a href="#contact" class="icon solid fa-envelope"><span>Contact Us</span></a>
+						<a href="#about-baker" class="icon solid fa-user"><span>The Baker</span></a>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Me -->
+							<article id="home" class="panel intro">
+								<header>
+									<h1>Fatima's Bakery</h1>
+									<p>Baking Happiness into Every Bite</p>
+								</header>
+								<a href="#work" class="jumplink pic">
+									<span class="arrow icon solid fa-chevron-right"><span>See my work</span></span>
+									<img src="images/Bakery.png" alt="" />
+								</a>
+							</article>
+
+						<!-- Work -->
+							<article id="work" class="panel">
+								<header>
+									<h2>Menu</h2>
+								</header>
+								<p>
+									View our amazing menu! We have all kinds of baked goods, from cakes to cookies, brownies to muffins,
+									pies to cupcakes, or just about anything sweet that you're craving! Whatever delectable dessert you 
+									want, we have it! <br> Please note: The price remains the same for all flavors across every dessert on our menu!  
+							
+								</p>
+								<section>
+									<div class="row">
+										<div class="col-4 col-6-medium col-12-small" style="position: relative; display: inline-block;" onmouseover="this.querySelector('.hover-text').style.opacity = 1;" onmouseout="this.querySelector('.hover-text').style.opacity = 0;">
+											<a href="#" class="image fit" onclick="openDessertModal('cake', event)">
+												<img src="images/CakeImage.png" alt="Cake">
+												 <!-- Overlay text -->
+       											 <span class="hover-text" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 18px; font-weight: bold; opacity: 0; background: rgba(0, 0, 0, 0.6); padding: 10px; border-radius: 5px; transition: opacity 0.3s ease;">
+            											View Cake Menu
+       											 </span>
+											</a>
+										</div>
+
+										<div class="col-4 col-6-medium col-12-small" style="position: relative; display: inline-block;" onmouseover="this.querySelector('.hover-text').style.opacity = 1;" onmouseout="this.querySelector('.hover-text').style.opacity = 0;">
+											<a href="#" class="image fit" onclick="openDessertModal('cookies', event)">
+												<img src="images/Cookies.png" alt="Cookies">
+											<!-- Overlay text -->
+											<span class="hover-text" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 18px; font-weight: bold; opacity: 0; background: rgba(0, 0, 0, 0.6); padding: 10px; border-radius: 5px; transition: opacity 0.3s ease;">
+												View Cookies Menu
+											</span>
+											</a>
+										</div>
+
+										<div class="col-4 col-6-medium col-12-small" style="position: relative; display: inline-block;" onmouseover="this.querySelector('.hover-text').style.opacity = 1;" onmouseout="this.querySelector('.hover-text').style.opacity = 0;">
+											<a href="#" class="image fit" onclick="openDessertModal('cupcakes', event)">
+												<img src="images/Cupcakes.png" alt="Cupcakes" height="290">
+											<!-- Overlay text -->
+											<span class="hover-text" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 18px; font-weight: bold; opacity: 0; background: rgba(0, 0, 0, 0.6); padding: 10px; border-radius: 5px; transition: opacity 0.3s ease;">
+												View Cupcakes Menu
+											</span>
+											</a>
+										</div>
+
+										<div class="col-4 col-6-medium col-12-small" style="position: relative; display: inline-block;" onmouseover="this.querySelector('.hover-text').style.opacity = 1;" onmouseout="this.querySelector('.hover-text').style.opacity = 0;">
+											<a href="#" class="image fit" onclick="openDessertModal('brownies', event)">
+											<img src="images/Brownies.png" alt="Brownies" height="290">
+										<!-- Overlay text -->
+										<span class="hover-text" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 18px; font-weight: bold; opacity: 0; background: rgba(0, 0, 0, 0.6); padding: 10px; border-radius: 5px; transition: opacity 0.3s ease;">
+											View Brownies Menu
+										</span>
+										</a>
+										</div>
+
+										<div class="col-4 col-6-medium col-12-small" style="position: relative; display: inline-block;" onmouseover="this.querySelector('.hover-text').style.opacity = 1;" onmouseout="this.querySelector('.hover-text').style.opacity = 0;">
+											<a href="#" class="image fit" onclick="openDessertModal('pies', event)">
+											<img src="images/Pies.png" alt="Pies" height="290">
+										<!-- Overlay text -->
+										<span class="hover-text" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 18px; font-weight: bold; opacity: 0; background: rgba(0, 0, 0, 0.6); padding: 10px; border-radius: 5px; transition: opacity 0.3s ease;">
+											View Pies Menu
+										</span>
+										</a>
+										</div>
+
+										<div class="col-4 col-6-medium col-12-small" style="position: relative; display: inline-block;" onmouseover="this.querySelector('.hover-text').style.opacity = 1;" onmouseout="this.querySelector('.hover-text').style.opacity = 0;">
+											<a href="#" class="image fit" onclick="openDessertModal('muffins', event)">
+											<img src="images/Muffins.png" alt="Muffins" height="290">
+										<!-- Overlay text -->
+										<span class="hover-text" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 18px; font-weight: bold; opacity: 0; background: rgba(0, 0, 0, 0.6); padding: 10px; border-radius: 5px; transition: opacity 0.3s ease;">
+											View Muffins Menu
+										</span>
+										</a>
+										</div>
+
+										<div class="col-4 col-6-medium col-12-small" style="position: relative; display: inline-block;" onmouseover="this.querySelector('.hover-text').style.opacity = 1;" onmouseout="this.querySelector('.hover-text').style.opacity = 0;">
+											<a href="#" class="image fit" onclick="openDessertModal('cinnamon-rolls', event)">
+											<img src="images/Cinnamon-Rolls.png" alt="Cinnamon-Rolls" height="290">
+										<!-- Overlay text -->
+										<span class="hover-text" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 18px; font-weight: bold; opacity: 0; background: rgba(0, 0, 0, 0.6); padding: 10px; border-radius: 5px; transition: opacity 0.3s ease;">
+											View Cinnamon Rolls Menu
+										</span>
+										</a>
+										</div>
+
+										<div class="col-4 col-6-medium col-12-small" style="position: relative; display: inline-block;" onmouseover="this.querySelector('.hover-text').style.opacity = 1;" onmouseout="this.querySelector('.hover-text').style.opacity = 0;">
+											<a href="#" class="image fit" onclick="openDessertModal('croissants', event)">
+											<img src="images/Croissants.png" alt="Croissants" height="290">
+										<!-- Overlay text -->
+										<span class="hover-text" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 18px; font-weight: bold; opacity: 0; background: rgba(0, 0, 0, 0.6); padding: 10px; border-radius: 5px; transition: opacity 0.3s ease;">
+											View Croissants Menu
+										</span>
+										</a>
+										</div>
+
+										<div class="col-4 col-6-medium col-12-small" style="position: relative; display: inline-block;" onmouseover="this.querySelector('.hover-text').style.opacity = 1;" onmouseout="this.querySelector('.hover-text').style.opacity = 0;">
+											<a href="#" class="image fit" onclick="openDessertModal('lemon-bars', event)">
+											<img src="images/Lemon-Bars.png" alt="Lemon-Bars" height="290">
+										<!-- Overlay text -->
+										<span class="hover-text" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 18px; font-weight: bold; opacity: 0; background: rgba(0, 0, 0, 0.6); padding: 10px; border-radius: 5px; transition: opacity 0.3s ease;">
+											View Lemon Bars Menu
+										</span>
+										</a>
+										</div>
+
+										<div class="col-4 col-6-medium col-12-small" style="position: relative; display: inline-block;" onmouseover="this.querySelector('.hover-text').style.opacity = 1;" onmouseout="this.querySelector('.hover-text').style.opacity = 0;">
+											<a href="#" class="image fit" onclick="openDessertModal('eclairs', event)">
+											<img src="images/Eclairs.png" alt="Eclairs" height="290">
+										<!-- Overlay text -->
+										<span class="hover-text" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 18px; font-weight: bold; opacity: 0; background: rgba(0, 0, 0, 0.6); padding: 10px; border-radius: 5px; transition: opacity 0.3s ease;">
+											View Eclairs Menu
+										</span>
+										</a>
+										</div>
+
+										<div class="col-4 col-6-medium col-12-small" style="position: relative; display: inline-block;" onmouseover="this.querySelector('.hover-text').style.opacity = 1;" onmouseout="this.querySelector('.hover-text').style.opacity = 0;">
+											<a href="#" class="image fit" onclick="openDessertModal('scones', event)">
+											<img src="images/Scones.png" alt="Scones" height="290">
+										<!-- Overlay text -->
+										<span class="hover-text" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 18px; font-weight: bold; opacity: 0; background: rgba(0, 0, 0, 0.6); padding: 10px; border-radius: 5px; transition: opacity 0.3s ease;">
+											View Scones Menu
+										</span>
+										</a>
+										</div>
+
+										<div class="col-4 col-6-medium col-12-small" style="position: relative; display: inline-block;" onmouseover="this.querySelector('.hover-text').style.opacity = 1;" onmouseout="this.querySelector('.hover-text').style.opacity = 0;">
+											<a href="#" class="image fit" onclick="openDessertModal('cheesecake', event)">
+											<img src="images/Cheesecake.png" alt="Cheesecake" height="290">
+										<!-- Overlay text -->
+										<span class="hover-text" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 18px; font-weight: bold; opacity: 0; background: rgba(0, 0, 0, 0.6); padding: 10px; border-radius: 5px; transition: opacity 0.3s ease;">
+											View Cheesecake Menu
+										</span>
+										</a>
+										</div>
+									</div>
+								</section>
+							</article>
+
+							<!-- Modal for Dessert Details -->
+							<div id="dessertModal" class="modal">
+								<div class="modal-content">
+									<span class="close" onclick="closeDessertModal()">&times;</span>
+									<h2 id="dessertTitle">Dessert Name</h2>
+									<p id="dessertDescription">Description goes here...</p>
+									<p id="dessertPrice">Price: $0.00</p>
+									<p id="dessertFlavors">Available Flavors: Vanilla, Chocolate</p>
+								</div>
+							</div>
+
+
+						<!-- Contact -->
+							<article id="contact" class="panel">
+								<header>
+									<h2>Contact Us</h2>
+								</header>
+								<p>
+									Got questions or want to place an order for pickup? Use the form below to 
+									reach out to us! You can place your order ahead of time and pay in person 
+									when you pick it up. 
+
+								</p>
+								<form action="#" method="post">
+									<div>
+										<div class="row">
+											<div class="col-6 col-12-medium">
+												<input type="text" name="name" placeholder="Name" />
+											</div>
+											<div class="col-6 col-12-medium">
+												<input type="text" name="email" placeholder="Email" />
+											</div>
+											<div class="col-12">
+												<input type="text" name="subject" placeholder="Subject" />
+											</div>
+											<div class="col-12">
+												<textarea name="message" placeholder="Message" rows="6"></textarea>
+											</div>
+											<div class="col-12">
+												<input type="submit" value="Send Message" />
+											</div>
+										</div>
+									</div>
+								</form>
+							</article>
+
+
+							<!-- About the Baker -->
+							<article id="about-baker" class="panel">
+								<h2><i class="fa fa-user"></i> About the Baker</h2>
+								<br>
+								<!-- Container for image and text -->
+								<div style="display: flex; align-items: center; justify-content: space-between; padding: 20px;">
+							
+									<!-- Image Section -->
+									<div style="flex: 1; max-width: 45%; margin-right: 20px;">
+										<img src="images/My-Profile-Pic.png" alt="Fatima, the baker" style="width: 100%; height: auto; border-radius: 8px;" />
+									</div>
+							
+									<!-- Text Section -->
+									<div style="flex: 2; max-width: 50%;">
+										<p>Hi, I'm Fatima, the baker behind this bakery. I have a passion for creating delicious, handmade treats with love and care. Every item is made from scratch with the finest ingredients, and I pour my heart into each batch!</p>
+									</div>
+								</div>
+							
+							</article>
+							
+
+
+				<!-- Footer -->
+					<div id="footer">
+						<ul class="copyright">
+							<li>&copy; Untitled.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+			<script>
+				// JavaScript for handling the modal behavior
+				function openDessertModal(dessert, event) {
+
+					// Prevent the default link behavior (scrolling)
+    				event.preventDefault();
+
+					let title = '';
+					let description = '';
+					let price = '';
+					let flavors = '';
+				
+					// Set values based on which dessert is clicked
+					if (dessert === 'cake') {
+						title = 'Chocolate Cake';
+						description = 'A rich, moist chocolate cake with smooth frosting.';
+						price = '$25 per cake, $3 per slice';
+						flavors = 'Chocolate, Vanilla, Strawberry, Strawberry Shortcake, Oreo, Carrot, Red Velvet, Lemon, Coconut, Double Chocolate';
+					}
+					else if (dessert === 'cookies') {
+						title = 'Fresh Baked Cookies';
+						description = 'Soft, chewy cookies with chocolate chips.';
+						price = '$14 (for one dozen), $1.25 per cookie';
+						flavors = 'Chocolate Chip, Double Chocolcate Chip, Snickerdoodle, Peanut Butter, Oatmeal Raisin';
+					}
+					else if (dessert === 'cupcakes') {
+						title = 'Vanilla Cupcakes';
+						description = 'Delicious vanilla cupcakes with creamy frosting.';
+						price = '$15 (for one dozen), $1.50 per cupcake';
+						flavors = 'Vanilla, Chocolate, Red Velvet, Birthday Cake, Oreo';
+					} 
+					else if (dessert === 'brownies') {
+						title = 'Fudge Brownies';
+						description = 'Fudgy, melt-in-your-mouth brownies with a perfect balance of chocolate richness.';
+						price = '$18 (for one dozen), $1.50 per brownie piece';
+						flavors = 'Chocolate, Double Chocolate';
+					}
+					else if (dessert === 'pies') {
+						title = 'Apple Pie';
+						description = 'A classic apple pie with tender apples, cinnamon, and a golden, crisp crust.';
+						price = '$15 per pie, $2.25 per slice';
+						flavors = 'Apple, Key lime, Pecan, Pumpkin, Chocolcate Cream, Coconut Cream, Lemon Meringue, Blueberry';
+					}
+					else if (dessert === 'muffins') {
+						title = 'Blueberry Muffins';
+						description = 'Golden muffins with a tender, buttery texture and a pop of sweet blueberries.';
+						price = '$12 (for one dozen), $1.25 per muffin';
+						flavors = 'Blueberry, Chocolcate Chip, Banana';
+					}
+					else if (dessert === 'cinnamon-rolls') {
+						title = 'Cinnamon Rolls';
+						description = 'Freshly baked cinnamon rolls with a gooey center and a perfect icing finish.';
+						price = '$18 (for one dozen), $2 per roll';
+						flavors = 'Classic ';
+					}
+					else if (dessert === 'croissants') {
+						title = 'Croissants';
+						description = 'Light, airy croissants with a crisp, golden exterior and rich, buttery flavor.';
+						price = '$2 per croissant';
+						flavors = 'Classic, Chocolate, Almond';
+					}
+					else if (dessert === 'lemon-bars') {
+						title = 'Lemon Bars';
+						description = 'Sweet, refreshing lemon bars with a silky filling and a perfectly crisp base.';
+						price = '$12 (for one dozen), $1.25 per bar';
+						flavors = 'Classic';
+					}
+					else if (dessert === 'eclairs') {
+						title = 'Eclairs';
+						description = 'Golden eclairs filled with a rich custard and topped with a perfect chocolate glaze.';
+						price = '$2 per eclair';
+						flavors = 'Chocolate';
+					}
+					else if (dessert === 'scones') {
+						title = 'Scones';
+						description = 'Fluffy, buttery scones with a perfect crumb and just the right amount of sweetness.';
+						price = '$1.50 per scone';
+						flavors = 'Classic, Strawberry, Chocolcate chip';
+					}
+					else if (dessert === 'cheesecake') {
+						title = 'Cheesecake';
+						description = 'Indulgent, creamy cheesecake with a smooth texture and a delicate, sweet crust.';
+						price = '$20 per cheesecake, $2.50 per slice';
+						flavors = 'Classic, Strawberry, Lemon Meringue, White Chocolate Raspberry';
+					}
+
+				
+					// Update the modal content with the selected dessert's details
+					document.getElementById('dessertTitle').innerText = title;
+					document.getElementById('dessertDescription').innerText = description;
+					document.getElementById('dessertPrice').innerText = 'Price: ' + price;
+					document.getElementById('dessertFlavors').innerText = 'Available Flavors: ' + flavors;
+				
+					// Show the modal
+					document.getElementById('dessertModal').style.display = 'block';
+				}
+				
+				// Function to close the modal
+				function closeDessertModal() {
+					document.getElementById('dessertModal').style.display = 'none';
+				}
+				</script>
+	</body>
+</html>
